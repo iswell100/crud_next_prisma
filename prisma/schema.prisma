@@ -25,3 +25,8 @@ model Product {
   brand     Brand    @relation(fields: [brandId], references: [id])
   brandId   Int
 }
+
+model JenisRegu {
+  id       Int       @id @default(autoincrement())
+  name     String
+}
