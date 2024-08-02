@@ -12,7 +12,7 @@ const JenisRegu = async () => {
             <tr>
               <th>#</th>
               <th>Jenis</th>
-              <th className="text-center">Actions</th>
+              <th className="text-center">Actioons</th>
             </tr>
           </thead>
           <tbody>
