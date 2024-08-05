@@ -4,6 +4,8 @@ import UpdateJenisRegu from "./updateJenisRegu";
 
 const prisma = new PrismaClient();
 
+export const dynamic = 'force-dynamic';
+
 const getJenisRegu = async () => {
   const res = await prisma.jenisRegu.findMany({
     select: {
@@ -50,7 +52,5 @@ const JenisRegu = async () => {
     </div>
   );
 };
-
-export const revalidate = 10;
 
 export default JenisRegu;
