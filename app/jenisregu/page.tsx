@@ -51,4 +51,6 @@ const JenisRegu = async () => {
   );
 };
 
+export const revalidate = 10;
+
 export default JenisRegu;
