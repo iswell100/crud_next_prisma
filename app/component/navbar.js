@@ -23,8 +23,9 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             <li><Link href={"../"}>Homepage</Link></li>
-            <li><Link href={"../jenisregu"}>Jenis Regu</Link></li>
-            <li><Link href={"../regu"}>Regu</Link></li>
+            <li><Link href={"../satuan"}>Satuan</Link></li>
+            <li><Link href={"../putra"}>Putra</Link></li>
+            <li><Link href={"../putri"}>Putra</Link></li>
           </ul>
         </div>
       </div>
