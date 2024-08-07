@@ -1,5 +1,4 @@
 // app/page.tsx
-import { FC } from 'react';
 
 interface DataItem {
   Regu: string;
@@ -8,6 +7,8 @@ interface DataItem {
   HastaKarya: string;
   CerdasCermat: string;
 }
+
+export const dynamic = 'force-dynamic';
 
 const fetchData = async (): Promise<DataItem[]> => {
   const url = 'https://script.google.com/macros/s/AKfycbwKTABQs8JOaHyQKPg6Ff5_1kVtBQv-T2Q1o420kxlpfm2_9_IDx92xfhR4cFLbpTUV/exec';
@@ -21,7 +22,7 @@ const fetchData = async (): Promise<DataItem[]> => {
 }
 
 // Komponen Server
-const JenisRegu = async () => {
+const Satuan = async () => {
   const datas = await fetchData();
 
   return (
@@ -36,13 +37,13 @@ const JenisRegu = async () => {
               <th>Pionering</th>
               <th>Hasta Karya</th>
               <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
-              <th>Cerdas Cermat</th>
+              <th>Dance Semaphore</th>
+              <th>Senam Pramuka</th>
+              <th>Yel Yel</th>
+              <th>Sandi</th>
+              <th>P3K</th>
+              <th>KIM</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>
@@ -76,4 +77,4 @@ const JenisRegu = async () => {
   );
 };
 
-export default JenisRegu;
+export default Satuan;
