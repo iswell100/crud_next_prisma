@@ -1,5 +1,3 @@
-// app/page.tsx
-
 interface DataItem {
   Regu: string;
   Pbb: string;
@@ -18,7 +16,7 @@ interface DataItem {
 export const dynamic = 'force-dynamic';
 
 const fetchData = async (): Promise<DataItem[]> => {
-  const url = 'https://script.google.com/macros/s/AKfycbwKTABQs8JOaHyQKPg6Ff5_1kVtBQv-T2Q1o420kxlpfm2_9_IDx92xfhR4cFLbpTUV/exec';
+  const url = 'https://script.google.com/macros/s/AKfycbzZlfmzCy1fQXi1_gL-mVf8E2mmK08t78CFxoZsqv38dE8HwHsho62rnCmR_fwaKtUi/exec';
   const res = await fetch(url);
 
   if (!res.ok) {
@@ -28,7 +26,7 @@ const fetchData = async (): Promise<DataItem[]> => {
   return res.json();
 }
 
-const Satuan = async () => {
+const Putri = async () => {
   const datas = await fetchData();
 
   return (
@@ -83,4 +81,4 @@ const Satuan = async () => {
   );
 };
 
-export default Satuan;
+export default Putri;

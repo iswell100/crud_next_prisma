@@ -1,17 +1,22 @@
-// app/page.tsx
-
 interface DataItem {
   Regu: string;
   Pbb: string;
   Pionering: string;
   HastaKarya: string;
   CerdasCermat: string;
+  DanceSemaphore: string;
+  SenamPramukaJilid2: string;
+  YelYel: string;
+  Sandi: string;
+  P3k: string;
+  Kim: string;
+  Total: string;
 }
 
 export const dynamic = 'force-dynamic';
 
 const fetchData = async (): Promise<DataItem[]> => {
-  const url = 'https://script.google.com/macros/s/AKfycbwKTABQs8JOaHyQKPg6Ff5_1kVtBQv-T2Q1o420kxlpfm2_9_IDx92xfhR4cFLbpTUV/exec';
+  const url = 'https://script.google.com/macros/s/AKfycbyAo282u5DgZE2XD__QMiwmJPJdnX2pMmbFMRPv2QLiysBIpo-JXkfUu9dLeiQx9yGK/exec';
   const res = await fetch(url);
 
   if (!res.ok) {
@@ -21,8 +26,7 @@ const fetchData = async (): Promise<DataItem[]> => {
   return res.json();
 }
 
-// Komponen Server
-const Satuan = async () => {
+const Putra = async () => {
   const datas = await fetchData();
 
   return (
@@ -56,13 +60,13 @@ const Satuan = async () => {
                   <td>{data.Pionering}</td>
                   <td>{data.HastaKarya}</td>
                   <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
-                  <td>{data.CerdasCermat}</td>
+                  <td>{data.DanceSemaphore}</td>
+                  <td>{data.SenamPramukaJilid2}</td>
+                  <td>{data.YelYel}</td>
+                  <td>{data.Sandi}</td>
+                  <td>{data.P3k}</td>
+                  <td>{data.Kim}</td>
+                  <td>{data.Total}</td>
                 </tr>
               ))
             ) : (
@@ -77,4 +81,4 @@ const Satuan = async () => {
   );
 };
 
-export default Satuan;
+export default Putra;
